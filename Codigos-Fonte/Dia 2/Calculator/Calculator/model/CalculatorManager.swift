@@ -13,6 +13,8 @@ struct CalculatorManager {
     enum OperationEnum {
         case unaryOperation((Double) -> Double)
         case binaryOperation((Double, Double) -> Double)
+        case binaryPercent((Double, Double) -> Double)
+        case constant (Double)
         case unknown
         case equals
     }
@@ -28,7 +30,9 @@ struct CalculatorManager {
         "÷": OperationEnum.binaryOperation({$0/$1}),
         "±": OperationEnum.unaryOperation( { $0 == 0 ? $0 : -$0 }),
         "√": OperationEnum.unaryOperation(sqrt),
-        "%": OperationEnum.binaryOperation({ $0 * $1/100 }),
+        "%": OperationEnum.binaryPercent({  $0 * ($1 / 100) }),
+        "x": OperationEnum.constant(Double.pi),
+        "e": OperationEnum.constant(M_E),
         "=": OperationEnum.equals
     ]
     
@@ -56,15 +60,28 @@ struct CalculatorManager {
         guard let operation = operacoes[symbol] else {
             return
         }
+        let secundOperator = binaryOperationMemory?.firstOperand != nil
+        
         switch operation {
         case .unaryOperation(let op):
             accumulator = op(accumulator)
-        case .binaryOperation(let oper):
-            binaryOperationMemory = PreviusBinaryOperation(function: oper, firstOperand: self.accumulator)
+        case .binaryOperation(let op):
+            binaryOperationMemory = PreviusBinaryOperation(function: op, firstOperand: self.accumulator)
+        case .binaryPercent(let op):
+            if let firstOp = binaryOperationMemory?.firstOperand {
+                self.accumulator = op(firstOp, self.accumulator)
+            }else{
+                self.accumulator = op(Double(1), self.accumulator)
+            }
         case .equals:
             doPreviusBinaryOperation()
+        case .constant(let op):
+            self.accumulator =  op
         default:
             break
+        }
+        if secundOperator {
+            doPreviusBinaryOperation()
         }
     }
     
@@ -76,6 +93,11 @@ struct CalculatorManager {
     
     mutating func setOperand(_ operation: Double){
         self.accumulator = operation
+    }
+    
+    mutating func clearOperand() {
+        self.accumulator = 0.0
+        self.binaryOperationMemory = nil
     }
     
 }

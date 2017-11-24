@@ -22,10 +22,18 @@ class ViewController: UIViewController {
         }
     }
     
+    @IBOutlet weak var toucClear: UIButton!
+    
     @IBAction func touchClear(_ sender: UIButton) {
+        if userIsTyping {
+            self.manager.clearMemony()
+        } else {
+            self.manager.clearOperand()
+        }
         userIsTyping = false
-        self.manager.clearMemony()
+        
         display.text = "0"
+        self.toucClear?.titleLabel?.text = "AC"
     }
     
     @IBAction func touchDigit(_ sender: UIButton) {
@@ -36,6 +44,7 @@ class ViewController: UIViewController {
         } else {
             display.text = digit
             userIsTyping = true
+            self.toucClear?.titleLabel?.text = "C"
         }
     }
     
