@@ -16,6 +16,7 @@
 		6C742AD41FC8A09200E0709B /* SwiftTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C742AD31FC8A09200E0709B /* SwiftTest.swift */; };
 		6C742ADC1FC8B2C900E0709B /* EnumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C742ADB1FC8B2C900E0709B /* EnumTests.swift */; };
 		6C742ADE1FC8BFBC00E0709B /* TestesComEnum2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C742ADD1FC8BFBC00E0709B /* TestesComEnum2.swift */; };
+		6C742AE01FC8C1F300E0709B /* ExtensionClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C742ADF1FC8C1F300E0709B /* ExtensionClass.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		6C742AD51FC8A09200E0709B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6C742ADB1FC8B2C900E0709B /* EnumTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumTests.swift; sourceTree = "<group>"; };
 		6C742ADD1FC8BFBC00E0709B /* TestesComEnum2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestesComEnum2.swift; sourceTree = "<group>"; };
+		6C742ADF1FC8C1F300E0709B /* ExtensionClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionClass.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 		6C742AD21FC8A09200E0709B /* SwiftTest */ = {
 			isa = PBXGroup;
 			children = (
+				6C742ADF1FC8C1F300E0709B /* ExtensionClass.swift */,
 				6C742ADD1FC8BFBC00E0709B /* TestesComEnum2.swift */,
 				6C742ADB1FC8B2C900E0709B /* EnumTests.swift */,
 				6C742AD31FC8A09200E0709B /* SwiftTest.swift */,
@@ -284,6 +287,7 @@
 			files = (
 				6C742ADE1FC8BFBC00E0709B /* TestesComEnum2.swift in Sources */,
 				6C742ADC1FC8B2C900E0709B /* EnumTests.swift in Sources */,
+				6C742AE01FC8C1F300E0709B /* ExtensionClass.swift in Sources */,
 				6C742AD41FC8A09200E0709B /* SwiftTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
