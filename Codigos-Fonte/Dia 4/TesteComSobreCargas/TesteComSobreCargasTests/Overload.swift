@@ -7,7 +7,7 @@
 //
 
 import XCTest
-
+ /*
 postfix operator-
 infix operator x: MultiplicationPrededence
 // https://developer.apple.com/documentation/swift/operator_declarations
@@ -47,3 +47,4 @@ class Overload: XCTestCase {
         XCTAssertEqual(Vector2D(x: 2, y: 2) × Vector2D(x: 2, y: 2), 8)
     }
 }
+ */

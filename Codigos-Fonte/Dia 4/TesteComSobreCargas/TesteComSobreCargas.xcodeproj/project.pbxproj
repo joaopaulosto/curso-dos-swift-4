@@ -14,6 +14,7 @@
 		6CD9A8621FCCA5E80015D8EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CD9A8601FCCA5E80015D8EC /* LaunchScreen.storyboard */; };
 		6CD9A86D1FCCA5E80015D8EC /* TesteComSobreCargasTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD9A86C1FCCA5E80015D8EC /* TesteComSobreCargasTests.swift */; };
 		6CD9A8781FCCA73B0015D8EC /* Overload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD9A8771FCCA73B0015D8EC /* Overload.swift */; };
+		6CD9A87A1FCCD4AA0015D8EC /* CouriosyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD9A8791FCCD4AA0015D8EC /* CouriosyTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		6CD9A86C1FCCA5E80015D8EC /* TesteComSobreCargasTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TesteComSobreCargasTests.swift; sourceTree = "<group>"; };
 		6CD9A86E1FCCA5E80015D8EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6CD9A8771FCCA73B0015D8EC /* Overload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Overload.swift; sourceTree = "<group>"; };
+		6CD9A8791FCCD4AA0015D8EC /* CouriosyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouriosyTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 		6CD9A86B1FCCA5E80015D8EC /* TesteComSobreCargasTests */ = {
 			isa = PBXGroup;
 			children = (
+				6CD9A8791FCCD4AA0015D8EC /* CouriosyTests.swift */,
 				6CD9A8771FCCA73B0015D8EC /* Overload.swift */,
 				6CD9A86C1FCCA5E80015D8EC /* TesteComSobreCargasTests.swift */,
 				6CD9A86E1FCCA5E80015D8EC /* Info.plist */,
@@ -213,6 +216,7 @@
 			files = (
 				6CD9A86D1FCCA5E80015D8EC /* TesteComSobreCargasTests.swift in Sources */,
 				6CD9A8781FCCA73B0015D8EC /* Overload.swift in Sources */,
+				6CD9A87A1FCCD4AA0015D8EC /* CouriosyTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
