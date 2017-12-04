@@ -14,6 +14,8 @@ final class CompromissosTableViewController: UITableViewController {
     lazy var dataTask: [String: [Compromisso]] = [:]
     lazy var originalDataTask: [String: [Compromisso]] = [:]
     
+    @IBOutlet weak var fontSize: UISlider!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         GerenciadorCompromisso.sharedInstance.geradorCompromissos(data: Date(), qtde: 2)
@@ -29,7 +31,12 @@ final class CompromissosTableViewController: UITableViewController {
         originalDataTask = dataTask
     }
     
-   
+    var fontSizeCell = 0.0
+    @IBAction func sliderValueFontSize(_ sender: Any) {
+        self.fontSizeCell = Double(fontSize.value)
+        tableView.reloadData()
+    }
+    
 }
 
 //MARK: Métodos e ações
@@ -113,6 +120,21 @@ extension CompromissosTableViewController {
             cell.accessoryType = UITableViewCellAccessoryType.none
             cell.imageView?.image = #imageLiteral(resourceName: "todo")
         }
+        
+        
+        
+        let sizeTitle = Double(self.fontSizeCell)
+        let fontTitle = UIFont(name: (cell.textLabel?.font.fontName)!, size: CGFloat(sizeTitle))
+        cell.textLabel?.font = fontTitle
+        
+        let sizeDetail = Double(self.fontSizeCell)
+        let fontDetail = UIFont(name: (cell.detailTextLabel?.font.fontName)!, size: CGFloat(sizeDetail))
+        cell.detailTextLabel?.font = fontDetail
+        
+        /*
+        cell.textLabel?.font.withSize(CGFloat(self.fontSizeCell))
+        cell.detailTextLabel?.font.withSize(CGFloat(self.fontSizeCell))
+        */
         return cell
     }
     

@@ -10,14 +10,14 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Meus Compromissos-->
+        <!--Compromissos Table View Controller-->
         <scene sceneID="y3a-qd-BqP">
             <objects>
                 <tableViewController id="Pav-rA-VcZ" customClass="CompromissosTableViewController" customModule="TrabalhoViewFinal" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="8QF-Sy-chc">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="8QF-Sy-chc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <searchBar key="tableHeaderView" contentMode="redraw" id="LUO-Sd-Mag">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
@@ -28,7 +28,7 @@
                         </searchBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="checkmark" indentationWidth="10" reuseIdentifier="compromisso" textLabel="icW-zP-0Yv" detailTextLabel="yKT-Fd-nod" imageView="eP2-Nm-omC" rowHeight="70" style="IBUITableViewCellStyleSubtitle" id="ue2-m9-ALY" customClass="CompromissoCell" customModule="TrabalhoViewFinal" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="72" width="375" height="70"/>
+                                <rect key="frame" x="0.0" y="99.5" width="375" height="70"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ue2-m9-ALY" id="vGU-xe-VwD">
                                     <rect key="frame" x="0.0" y="0.0" width="335" height="69.5"/>
@@ -61,7 +61,15 @@
                             <outlet property="delegate" destination="Pav-rA-VcZ" id="q3P-ZJ-9Dy"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Meus Compromissos" id="Aew-GQ-vH0">
+                    <navigationItem key="navigationItem" id="Aew-GQ-vH0">
+                        <nil key="title"/>
+                        <slider key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="14" minValue="14" maxValue="40" id="aNe-o6-TPb">
+                            <rect key="frame" x="8" y="6.5" width="324" height="31"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <connections>
+                                <action selector="sliderValueFontSize:" destination="Pav-rA-VcZ" eventType="valueChanged" id="Kzb-ZJ-vcJ"/>
+                            </connections>
+                        </slider>
                         <barButtonItem key="rightBarButtonItem" title="Item" image="plus" id="acg-TH-Eua">
                             <connections>
                                 <segue destination="1zg-o9-OKb" kind="presentation" identifier="AddItem" id="zxj-0D-cbh"/>
@@ -69,6 +77,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="fontSize" destination="aNe-o6-TPb" id="Lqq-9C-1Ac"/>
                         <outlet property="searchBar" destination="LUO-Sd-Mag" id="Rd3-6W-zmH"/>
                     </connections>
                 </tableViewController>
@@ -197,9 +206,6 @@
                                 <exclude reference="Hm3-Jh-UBz"/>
                                 <exclude reference="WUZ-Bi-FZE"/>
                                 <exclude reference="sOJ-kc-nfv"/>
-                                <exclude reference="3hX-C3-fep"/>
-                                <exclude reference="WjL-84-odx"/>
-                                <exclude reference="Y3y-RW-rT8"/>
                                 <exclude reference="Rjz-IG-ZeJ"/>
                                 <exclude reference="TQJ-Hq-Ac0"/>
                                 <exclude reference="bJU-6z-qPe"/>
@@ -210,6 +216,13 @@
                                 <exclude reference="lr0-GJ-Qge"/>
                                 <exclude reference="rbd-jv-lS9"/>
                                 <exclude reference="sVi-8z-drO"/>
+                                <exclude reference="4in-rc-cqO"/>
+                                <exclude reference="50l-Ma-GjE"/>
+                                <exclude reference="7f8-wy-S9Q"/>
+                                <exclude reference="vHW-5S-Cm1"/>
+                                <exclude reference="3hX-C3-fep"/>
+                                <exclude reference="WjL-84-odx"/>
+                                <exclude reference="Y3y-RW-rT8"/>
                                 <exclude reference="8B9-bM-UDt"/>
                                 <exclude reference="PAi-cP-hL4"/>
                                 <exclude reference="Zaz-Vd-rSH"/>
@@ -218,10 +231,6 @@
                                 <exclude reference="dwS-f3-Jf9"/>
                                 <exclude reference="iYZ-6P-25e"/>
                                 <exclude reference="kOt-Zr-PPu"/>
-                                <exclude reference="4in-rc-cqO"/>
-                                <exclude reference="50l-Ma-GjE"/>
-                                <exclude reference="7f8-wy-S9Q"/>
-                                <exclude reference="vHW-5S-Cm1"/>
                                 <exclude reference="W0c-QD-cdM"/>
                                 <exclude reference="xhY-WI-fjG"/>
                                 <exclude reference="1da-0S-p7q"/>
@@ -238,18 +247,18 @@
                                 <include reference="nqW-9T-KF0"/>
                                 <include reference="Hm3-Jh-UBz"/>
                                 <include reference="WUZ-Bi-FZE"/>
-                                <include reference="WjL-84-odx"/>
-                                <include reference="Y3y-RW-rT8"/>
                                 <include reference="bJU-6z-qPe"/>
                                 <include reference="hxF-VA-hag"/>
                                 <include reference="4eO-GA-iax"/>
                                 <include reference="92C-jX-fZn"/>
                                 <include reference="rbd-jv-lS9"/>
+                                <include reference="4in-rc-cqO"/>
+                                <include reference="WjL-84-odx"/>
+                                <include reference="Y3y-RW-rT8"/>
                                 <include reference="PAi-cP-hL4"/>
                                 <include reference="ao8-B1-xCa"/>
                                 <include reference="dwS-f3-Jf9"/>
                                 <include reference="kOt-Zr-PPu"/>
-                                <include reference="4in-rc-cqO"/>
                                 <include reference="W0c-QD-cdM"/>
                                 <include reference="Wb3-A1-xoR"/>
                                 <include reference="nxS-VI-UF9"/>
@@ -265,19 +274,19 @@
                                 <include reference="wMo-Ia-mzc"/>
                                 <include reference="9LD-2X-DdY"/>
                                 <include reference="sOJ-kc-nfv"/>
-                                <include reference="3hX-C3-fep"/>
                                 <include reference="Rjz-IG-ZeJ"/>
                                 <include reference="TQJ-Hq-Ac0"/>
                                 <include reference="bVL-tz-fGl"/>
                                 <include reference="lr0-GJ-Qge"/>
                                 <include reference="sVi-8z-drO"/>
+                                <include reference="50l-Ma-GjE"/>
+                                <include reference="7f8-wy-S9Q"/>
+                                <include reference="vHW-5S-Cm1"/>
+                                <include reference="3hX-C3-fep"/>
                                 <include reference="8B9-bM-UDt"/>
                                 <include reference="Zaz-Vd-rSH"/>
                                 <include reference="bZy-iw-iva"/>
                                 <include reference="iYZ-6P-25e"/>
-                                <include reference="50l-Ma-GjE"/>
-                                <include reference="7f8-wy-S9Q"/>
-                                <include reference="vHW-5S-Cm1"/>
                                 <include reference="xhY-WI-fjG"/>
                                 <include reference="1da-0S-p7q"/>
                                 <include reference="LLx-QR-BE6"/>
