@@ -108,7 +108,9 @@ extension CompromissosTableViewController {
         
         if task?.situacao == Status.pronto {
             cell.imageView?.image = #imageLiteral(resourceName: "done")
+            cell.accessoryType = UITableViewCellAccessoryType.checkmark
         }else{
+            cell.accessoryType = UITableViewCellAccessoryType.none
             cell.imageView?.image = #imageLiteral(resourceName: "todo")
         }
         return cell
@@ -135,10 +137,11 @@ extension CompromissosTableViewController {
             
             let touchPoint = longPressGestureRecognizer.location(in: self.view)
             if let indexPath = tableView.indexPathForRow(at: touchPoint) {
-              let item = self.dataTask[getKeyBySection(indexPath.section)]?[indexPath.row]
+            let item = self.dataTask[getKeyBySection(indexPath.section)]?[indexPath.row]
                 
-                item?.situacao = item?.situacao == Status.pronto ? Status.pendente : Status.pronto
-                tableView.reloadData()
+            item?.situacao = item?.situacao == Status.pronto ? Status.pendente : Status.pronto
+            
+            tableView.reloadData()
             }
         }
     }

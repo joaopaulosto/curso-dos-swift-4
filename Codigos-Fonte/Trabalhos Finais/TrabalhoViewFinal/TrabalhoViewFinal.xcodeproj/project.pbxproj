@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		6C71F3231FD4982300EAEF7F /* Utilitario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C71F3221FD4982300EAEF7F /* Utilitario.swift */; };
-		6C71F3251FD4D7F200EAEF7F /* CompromissoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C71F3241FD4D7F200EAEF7F /* CompromissoCell.swift */; };
 		6C71F3291FD4DB3E00EAEF7F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C71F3281FD4DB3E00EAEF7F /* Images.xcassets */; };
 		6C71F32A1FD4DC5F00EAEF7F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C7B82781FD45C00005191A4 /* Main.storyboard */; };
 		6C71F32C1FD4E19400EAEF7F /* AdicionarCompromissoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C71F32B1FD4E19400EAEF7F /* AdicionarCompromissoVC.swift */; };
@@ -20,7 +19,6 @@
 
 /* Begin PBXFileReference section */
 		6C71F3221FD4982300EAEF7F /* Utilitario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilitario.swift; sourceTree = "<group>"; };
-		6C71F3241FD4D7F200EAEF7F /* CompromissoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompromissoCell.swift; sourceTree = "<group>"; };
 		6C71F3281FD4DB3E00EAEF7F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6C71F32B1FD4E19400EAEF7F /* AdicionarCompromissoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdicionarCompromissoVC.swift; sourceTree = "<group>"; };
 		6C7B82711FD45C00005191A4 /* TrabalhoViewFinal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrabalhoViewFinal.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -94,7 +92,6 @@
 			isa = PBXGroup;
 			children = (
 				6CF77C271FD48A8400B0E2C5 /* CompromissosTableViewController.swift */,
-				6C71F3241FD4D7F200EAEF7F /* CompromissoCell.swift */,
 				6C71F32B1FD4E19400EAEF7F /* AdicionarCompromissoVC.swift */,
 			);
 			path = ViewController;
@@ -192,7 +189,6 @@
 				6C71F32C1FD4E19400EAEF7F /* AdicionarCompromissoVC.swift in Sources */,
 				6C71F3231FD4982300EAEF7F /* Utilitario.swift in Sources */,
 				6C7B82751FD45C00005191A4 /* AppDelegate.swift in Sources */,
-				6C71F3251FD4D7F200EAEF7F /* CompromissoCell.swift in Sources */,
 				6CF77C281FD48A8400B0E2C5 /* CompromissosTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
