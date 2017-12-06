@@ -15,6 +15,7 @@ final class CompromissosTableViewController: UITableViewController {
     lazy var originalDataTask: [String: [Compromisso]] = [:]
     
     @IBOutlet weak var fontSize: UISlider!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,10 +23,29 @@ final class CompromissosTableViewController: UITableViewController {
        fillData()
         let longGesture = UILongPressGestureRecognizer(target: self, action: #selector(longPress(_:)))
         
+        let userDefaultConfig = UserDefaults.standard
+        self.fontSizeCell = Double(userDefaultConfig.integer(forKey: "fontSize"))
+        if self.fontSizeCell == Double(0) {
+            self.fontSizeCell = Double(self.fontSize.value)
+        }else{
+            self.fontSize.value = Float(Double(self.fontSizeCell))
+        }
         
         //let longPressRecognizer = UILongPressGestureRecognizer(target: self, action: "longPress:")
         self.view.addGestureRecognizer(longGesture)
+        
+        let initialMessage = UserDefaults.standard.string(forKey: "welcome")
+        
+        let alertMessageWelCome =  UIAlertController(title: "Seja Bem vindo", message: initialMessage, preferredStyle: .alert)
+        
+        let cancelAction = UIAlertAction(title: "OK", style: .cancel) { ( _ ) in }
+        
+        alertMessageWelCome.addAction(cancelAction)
+        
+        self.present(alertMessageWelCome, animated: true, completion: nil)
+       
     }
+    
     private func fillData(){
         dataTask = GerenciadorCompromisso.sharedInstance.meusCompromissos()
         originalDataTask = dataTask
@@ -34,8 +54,36 @@ final class CompromissosTableViewController: UITableViewController {
     var fontSizeCell = 0.0
     @IBAction func sliderValueFontSize(_ sender: Any) {
         self.fontSizeCell = Double(fontSize.value)
+        let userDefaultConfig = UserDefaults.standard
+        userDefaultConfig.setValue(self.fontSizeCell, forKey: "fontSize")
+        userDefaultConfig.synchronize()
+        
         tableView.reloadData()
     }
+    
+    @IBAction func welComeButtom(_ sender: Any) {
+        
+        let alertMessage =  UIAlertController(title: "Boas Vindas", message: "Informe sua mensagem de Boas Vidas", preferredStyle: .alert)
+        
+        
+        let confirmAction = UIAlertAction(title: "Confirma", style: .default){
+            (_) in
+            if let field = alertMessage.textFields![0] as? UITextField {
+                UserDefaults.standard.setValue(field.text, forKey: "welcome")
+                UserDefaults.standard.synchronize()
+            }
+        }
+        let cancelAction = UIAlertAction(title: "Cancelar", style: .cancel) { ( _ ) in }
+        
+        alertMessage.addTextField(configurationHandler: { ( textField ) in textField.placeholder = "Informe sua mensagem de boas vindas" })
+        
+        alertMessage.addAction(confirmAction)
+        alertMessage.addAction(cancelAction)
+        
+        self.present(alertMessage, animated: true, completion: nil)
+    }
+}
+func testeAlgumaCoisa(any: Any){
     
 }
 
@@ -122,7 +170,7 @@ extension CompromissosTableViewController {
         }
         
         
-        
+        /*
         let sizeTitle = Double(self.fontSizeCell)
         let fontTitle = UIFont(name: (cell.textLabel?.font.fontName)!, size: CGFloat(sizeTitle))
         cell.textLabel?.font = fontTitle
@@ -130,11 +178,11 @@ extension CompromissosTableViewController {
         let sizeDetail = Double(self.fontSizeCell)
         let fontDetail = UIFont(name: (cell.detailTextLabel?.font.fontName)!, size: CGFloat(sizeDetail))
         cell.detailTextLabel?.font = fontDetail
+         */
         
-        /*
-        cell.textLabel?.font.withSize(CGFloat(self.fontSizeCell))
-        cell.detailTextLabel?.font.withSize(CGFloat(self.fontSizeCell))
-        */
+       cell.textLabel?.font = cell.textLabel?.font.withSize(CGFloat(self.fontSizeCell))
+       cell.detailTextLabel?.font = cell.detailTextLabel?.font.withSize(CGFloat(self.fontSizeCell))
+        
         return cell
     }
     
@@ -167,5 +215,5 @@ extension CompromissosTableViewController {
             }
         }
     }
-    
 }
+

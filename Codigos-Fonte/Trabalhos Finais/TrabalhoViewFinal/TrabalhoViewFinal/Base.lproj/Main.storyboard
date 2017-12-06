@@ -63,8 +63,13 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="Aew-GQ-vH0">
                         <nil key="title"/>
-                        <slider key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="14" minValue="14" maxValue="40" id="aNe-o6-TPb">
-                            <rect key="frame" x="8" y="6.5" width="324" height="31"/>
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="settings" id="qVW-4Y-f6c">
+                            <connections>
+                                <action selector="welComeButtom:" destination="Pav-rA-VcZ" id="oZG-qg-1Ar"/>
+                            </connections>
+                        </barButtonItem>
+                        <slider key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="14" minValue="14" maxValue="35" id="aNe-o6-TPb">
+                            <rect key="frame" x="43" y="6.5" width="289" height="31"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <connections>
                                 <action selector="sliderValueFontSize:" destination="Pav-rA-VcZ" eventType="valueChanged" id="Kzb-ZJ-vcJ"/>
@@ -84,6 +89,128 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qlN-a5-r1v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1728.8" y="-157.87106446776613"/>
+        </scene>
+        <!--Scroll View Controller-->
+        <scene sceneID="lHT-zv-G5g">
+            <objects>
+                <viewController id="FVd-Tv-rJS" customClass="ScrollViewController" customModule="TrabalhoViewFinal" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="p0t-TR-0BQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xqg-hM-Gij">
+                                <rect key="frame" x="164" y="318" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LD0-rz-JqS">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2hU-yY-rm9">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9p2-ZF-vvy">
+                                        <rect key="frame" x="22" y="15" width="331" height="670"/>
+                                        <string key="text">Mussum Ipsum, cacilds vidis litro abertis. Mais vale um bebadis conhecidiss, que um alcoolatra anonimis. Praesent malesuada urna nisi, quis volutpat erat hendrerit non. Nam vulputate dapibus. Mauris nec dolor in eros commodo tempor. Aenean aliquam molestie leo, vitae iaculis nisl. Tá deprimidis, eu conheço uma cachacis que pode alegrar sua vidis.
+
+Viva Forevis aptent taciti sociosqu ad litora torquent. Atirei o pau no gatis, per gatis num morreus. Per aumento de cachacis, eu reclamis. Si u mundo tá muito paradis? Toma um mé que o mundo vai girarzis!
+
+Delegadis gente finis, bibendum egestas augue arcu ut est. A ordem dos tratores não altera o pão duris. Manduma pindureta quium dia nois paga. Praesent vel viverra nisi. Mauris aliquet nunc non turpis scelerisque, eget.
+
+Posuere libero varius. Nullam a nisl ut ante blandit hendrerit. Aenean sit amet nisi. Mé faiz elementum girarzis, nisi eros vermeio. Cevadis im ampola pa arma uma pindureta. Paisis, filhis, espiritis santis.
+
+Pra lá , depois divoltis porris, paradis. In elementis mé pra quem é amistosis quis leo. Suco de cevadiss deixa as pessoas mais interessantis. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.
+
+Nullam volutpat risus nec leo commodo, ut interdum diam laoreet. Sed non consequat odio. Nec orci ornare consequat. Praesent lacinia ultrices consectetur. Sed non ipsum felis. Si num tem leite então bota uma pinga aí cumpadi! Todo mundo vê os porris que eu tomo, mas ninguém vê os tombis que eu levo!
+
+Casamentiss faiz malandris se pirulitá. Diuretics paradis num copo é motivis de denguis. Quem num gosta di mim que vai caçá sua turmis! Detraxit consequat et quo num tendi nada.
+
+Copo furadis é disculpa de bebadis, arcu quam euismod magna. Não sou faixa preta cumpadi, sou preto inteiris, inteiris. Aenean aliquam molestie leo, vitae iaculis nisl. Leite de capivaris, leite de mula manquis sem cabeça.
+
+Interagi no mé, cursus quis, vehicula ac nisi. Em pé sem cair, deitado sem dormir, sentado sem cochilar e fazendo pose. Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e fermentis. Quem num gosta di mé, boa gentis num é.
+
+Sapien in monti palavris qui num significa nadis i pareci latim. Admodum accumsan disputationi eu sit. Vide electram sadipscing et per. Quem manda na minha terra sou euzis! Vehicula non. Ut sed ex eros. Vivamus sit amet nibh non tellus tristique interdum.
+
+Diuretics paradis num copo é motivis de denguis. Per aumento de cachacis, eu reclamis. Interagi no mé, cursus quis, vehicula ac nisi. Paisis, filhis, espiritis santis.
+
+Copo furadis é disculpa de bebadis, arcu quam euismod magna. Posuere libero varius. Nullam a nisl ut ante blandit hendrerit. Aenean sit amet nisi. Viva Forevis aptent taciti sociosqu ad litora torquent. In elementis mé pra quem é amistosis quis leo.
+
+Quem num gosta di mé, boa gentis num é. Pra lá , depois divoltis porris, paradis. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis. Manduma pindureta quium dia nois paga.
+
+Praesent malesuada urna nisi, quis volutpat erat hendrerit non. Nam vulputate dapibus. Delegadis gente finis, bibendum egestas augue arcu ut est. Suco de cevadiss deixa as pessoas mais interessantis. Mauris nec dolor in eros commodo tempor. Aenean aliquam molestie leo, vitae iaculis nisl.
+
+Aenean aliquam molestie leo, vitae iaculis nisl. Casamentiss faiz malandris se pirulitá. Detraxit consequat et quo num tendi nada. Quem num gosta di mim que vai caçá sua turmis!
+
+Tá deprimidis, eu conheço uma cachacis que pode alegrar sua vidis. Admodum accumsan disputationi eu sit. Vide electram sadipscing et per. Todo mundo vê os porris que eu tomo, mas ninguém vê os tombis que eu levo! Si u mundo tá muito paradis? Toma um mé que o mundo vai girarzis!
+
+Mais vale um bebadis conhecidiss, que um alcoolatra anonimis. Leite de capivaris, leite de mula manquis sem cabeça. Nec orci ornare consequat. Praesent lacinia ultrices consectetur. Sed non ipsum felis. Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e fermentis.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="9p2-ZF-vvy" secondAttribute="trailing" constant="22" id="9i6-Kj-51o"/>
+                                    <constraint firstAttribute="trailing" secondItem="2hU-yY-rm9" secondAttribute="trailing" id="GZO-QH-1Z8"/>
+                                    <constraint firstItem="2hU-yY-rm9" firstAttribute="leading" secondItem="LD0-rz-JqS" secondAttribute="leading" id="NWt-O2-h4a"/>
+                                    <constraint firstItem="2hU-yY-rm9" firstAttribute="top" secondItem="LD0-rz-JqS" secondAttribute="top" id="eM3-i1-Hty"/>
+                                    <constraint firstItem="2hU-yY-rm9" firstAttribute="centerX" secondItem="LD0-rz-JqS" secondAttribute="centerX" id="hX7-nC-UGo"/>
+                                    <constraint firstItem="9p2-ZF-vvy" firstAttribute="leading" secondItem="LD0-rz-JqS" secondAttribute="leading" constant="22" id="jXC-C0-qkT"/>
+                                    <constraint firstAttribute="bottom" secondItem="9p2-ZF-vvy" secondAttribute="bottom" constant="-38" id="nPP-Jn-Zbq"/>
+                                    <constraint firstItem="9p2-ZF-vvy" firstAttribute="top" secondItem="LD0-rz-JqS" secondAttribute="top" constant="15" id="nao-jl-rVo"/>
+                                    <constraint firstAttribute="bottom" secondItem="2hU-yY-rm9" secondAttribute="bottom" id="saf-eF-Rze"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="FVd-Tv-rJS" id="zUW-M9-KVU"/>
+                                </connections>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="uyL-Al-LIy" firstAttribute="bottom" secondItem="LD0-rz-JqS" secondAttribute="bottom" id="Jii-wx-eS8"/>
+                            <constraint firstItem="uyL-Al-LIy" firstAttribute="trailing" secondItem="LD0-rz-JqS" secondAttribute="trailing" id="O5y-HO-oPL"/>
+                            <constraint firstItem="LD0-rz-JqS" firstAttribute="leading" secondItem="uyL-Al-LIy" secondAttribute="leading" id="PkS-mP-SDy"/>
+                            <constraint firstItem="LD0-rz-JqS" firstAttribute="top" secondItem="uyL-Al-LIy" secondAttribute="top" id="jDc-B0-xei"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="uyL-Al-LIy"/>
+                    </view>
+                    <connections>
+                        <outlet property="myScroll" destination="LD0-rz-JqS" id="rO8-V5-qI3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W3Z-sq-L6A" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1292" y="875.71214392803608"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="M08-RC-KOg">
+            <objects>
+                <viewController id="dtg-WM-0VJ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QBp-yD-0aA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4bM-3G-9Cf">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <connections>
+                                    <outlet property="delegate" destination="dtg-WM-0VJ" id="tVn-Wp-kOx"/>
+                                </connections>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="iRr-Aq-KNx" firstAttribute="trailing" secondItem="4bM-3G-9Cf" secondAttribute="trailing" id="4aq-OS-xuH"/>
+                            <constraint firstItem="iRr-Aq-KNx" firstAttribute="bottom" secondItem="4bM-3G-9Cf" secondAttribute="bottom" id="NP8-IL-qNN"/>
+                            <constraint firstItem="4bM-3G-9Cf" firstAttribute="leading" secondItem="iRr-Aq-KNx" secondAttribute="leading" id="VB7-Jf-pJ2"/>
+                            <constraint firstItem="4bM-3G-9Cf" firstAttribute="top" secondItem="iRr-Aq-KNx" secondAttribute="top" id="eb5-1U-LUq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="iRr-Aq-KNx"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s8h-tC-DXf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2187" y="878"/>
         </scene>
         <!--Novo Compromisso-->
         <scene sceneID="IDH-qM-jtk">
@@ -359,5 +486,6 @@
     <resources>
         <image name="done" width="16" height="16"/>
         <image name="plus" width="16" height="16"/>
+        <image name="settings" width="16" height="16"/>
     </resources>
 </document>
