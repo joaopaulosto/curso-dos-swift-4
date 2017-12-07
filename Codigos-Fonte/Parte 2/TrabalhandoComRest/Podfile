@@ -7,15 +7,25 @@ target 'TrabalhandoComRest' do
 
   # Pods for TrabalhandoComRest
 
-  target 'TrabalhandoComRestTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
-  target 'TrabalhandoComRestUITests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
+  
   pod 'BFKit'
   pod 'SVPullToRefresh'
+  pod 'EasyRest'
+  pod 'EasyRest/LoggerBeaver'
+  pod 'SwiftMessages'
+  pod 'RealmSwift', '~> 3.0'
+  # pod 'Alamofire'
+  
+end
+
+
+post_install do |installer|
+    installer.pods_project.targets.each do |target|
+        compatibility_pods = ['Genome']
+        if compatibility_pods.include? target.name
+            target.build_configurations.each do |config|
+                config.build_settings['SWIFT_VERSION'] = '3.2'
+            end
+        end
+    end
 end
