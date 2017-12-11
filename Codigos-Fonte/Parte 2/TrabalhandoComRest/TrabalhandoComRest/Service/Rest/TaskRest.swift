@@ -31,6 +31,7 @@ public class TaskRest : BaseModel {
     var descriptionTask: String?
     var isComplete: Bool = false
     var owner: String?
+    var expiration: Date?
     
     required public init() { super.init() }
     
@@ -40,7 +41,6 @@ public class TaskRest : BaseModel {
         try title <~> map["title"]
         try descriptionTask <~> map["description"]
         try isComplete <~> map["is_complete"]
-        
     }
 }
 

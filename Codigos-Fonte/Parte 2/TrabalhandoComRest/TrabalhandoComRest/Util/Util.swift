@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import SwiftMessages
 
 struct AppConfig {
     fileprivate static let kClientSecrecte = "mxylLGI4n6xRa1IxpOpiTMElQsCXl06gjn5I3SL10u82TmWjJqdQZYDnhMWSaiseXLdNIP8cTjuFZDWfMPCMmvkUXvCL1aQuResA63uelytSmYCHafXrFyFtxnzgzyxz"
@@ -50,6 +51,52 @@ class SecurityUtil {
         dict["username"] = userName
         dict["password"] = password
         return dict
+    }
+}
+
+typealias PositiveHandle = () -> Void
+typealias NegativeHandle = () -> Void
+
+class MessageUtil {
+    
+    class func showConfirm(target: UIViewController, title: String, message: String, positiveButton: String, positiveSelector: @escaping PositiveHandle, negativeButton: String, negativeHande: @escaping NegativeHandle){
+        
+        // Declare Alert message
+        let dialogMessage = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        
+        // Create OK button with action handler
+        let positiveOption = UIAlertAction(title: positiveButton, style: .default, handler: { (action) -> Void in
+             positiveSelector()
+        })
+        
+        // Create Cancel button with action handlder
+        let negativeOption = UIAlertAction(title: negativeButton, style: .cancel) { (action) -> Void in
+           negativeHande()
+        }
+        
+        //Add OK and Cancel button to dialog message
+        dialogMessage.addAction(positiveOption)
+        dialogMessage.addAction(negativeOption)
+        
+        // Present dialog message to user
+        target.present(dialogMessage, animated: true, completion: nil)
+        
+        
+    }
+    class func showMessage(view: UIView, theme: Theme, title: String, detail: String, labelButton: String?){
+        let view = MessageView.viewFromNib(layout: .cardView)
+        
+        view.configureTheme(theme)
+        view.configureContent(title: title, body: detail, iconImage: nil, iconText: nil, buttonImage: nil, buttonTitle: labelButton) { _ in
+            SwiftMessages.hide()
+        }
+        var config = SwiftMessages.defaultConfig
+        
+        config.presentationContext = .window(windowLevel: UIWindowLevelNormal)
+        config.presentationStyle = .center
+        view.button?.isHidden = labelButton == nil
+        
+        SwiftMessages.show(config: config, view: view)
     }
     
     

@@ -65,7 +65,7 @@ class LoginVC: UIViewController {
         
         let db = DataBase()
  
-        var enty = TokenEnty()
+        let enty = TokenEnty()
         enty.id = "1"
         enty.accessToken = token.accessToken
         enty.expiresIn = token.expiresIn!
@@ -92,10 +92,13 @@ class LoginVC: UIViewController {
         
     }
     func validateField() -> Bool {
+        
         guard (self.userName?.text) != nil else {
+            MessageUtil.showMessage(view: self.view, theme: .warning, title: "Login", detail: "Informe o Usuário", labelButton: "OK")
             return false
         }
         guard (self.password?.text) != nil else {
+            MessageUtil.showMessage(view: self.view, theme: .warning, title: "Login", detail: "Informe a senha do Usuário", labelButton: "OK")
             return false
         }
         return true

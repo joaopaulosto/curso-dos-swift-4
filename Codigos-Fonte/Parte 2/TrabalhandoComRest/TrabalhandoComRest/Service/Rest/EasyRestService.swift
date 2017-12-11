@@ -25,7 +25,7 @@ enum TaskRoute: Routable {
             return Rule(method: .post, path: AppConfig.kServiceAuthenticationURL, isAuthenticable: true, parameters: [.query:  SecurityUtil.shared().createHeadLogin(userName: name, password: password)])
             
          case let .insert(newTask):
-            return Rule(method: .post, path: AppConfig.kServiceDefaultURL, isAuthenticable: true, parameters: [.query: SecurityUtil.shared().getSecurityHeader(),  .body :  newTask ])
+            return Rule(method: .post, path: AppConfig.kServiceDefaultURL, isAuthenticable: true, parameters: [ .header : SecurityUtil.shared().getSecurityHeader(),  .body :  newTask ])
             
         case .getTask:
             return Rule(method: .get, path: AppConfig.kServiceDefaultURL, isAuthenticable: true, parameters: [.header: SecurityUtil.shared().getSecurityHeader()])
@@ -34,7 +34,7 @@ enum TaskRoute: Routable {
             return Rule(method: .delete, path: "\(AppConfig.kServiceDefaultURL){id}/", isAuthenticable: true, parameters: [.path: ["id": taskId], .header: SecurityUtil.shared().getSecurityHeader() ])
     
         case let .update (taskUpdate):
-            return Rule(method: .put, path: "\(AppConfig.kServiceDefaultURL){id}/", isAuthenticable: true, parameters: [.path: ["id", taskUpdate.id], .header: SecurityUtil.shared().getSecurityHeader()])
+            return Rule(method: .put, path: "\(AppConfig.kServiceDefaultURL){id}/", isAuthenticable: false, parameters: [.path: ["id", taskUpdate.id], .header: SecurityUtil.shared().getSecurityHeader(), .body: taskUpdate])
         }
         
     }
@@ -64,7 +64,7 @@ class TaskService: Service<TaskRoute> {
         try! call(.delete(taskId), type: TaskRest.self, onSuccess: onSuccess, onError: onError, always: always)
     }
     
-    func uopdate(task: TaskRest, onSuccess: @escaping (Response<TaskRest>?) -> Void, onError: @escaping (RestError?) -> Void, always: @escaping () -> Void){
+    func update(task: TaskRest, onSuccess: @escaping (Response<TaskRest>?) -> Void, onError: @escaping (RestError?) -> Void, always: @escaping () -> Void){
         try! call(.update(task), type: TaskRest.self, onSuccess: onSuccess, onError: onError, always: always)
     }
     

@@ -49,9 +49,29 @@ extension UIView {
 }
 
 extension Date {
-    func string(with format: String) -> String {
+    static let FORMAT_PICKER: String = "dd/MM/yy h:mm a"
+    static let FORMAT_SERVER: String = "yyyy-MM-dd"
+    static let FORMAT_TABLEVIEW: String = "h:mm a"
+    
+    func format(with format: String) -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = format
         return dateFormatter.string(from: self)
+    }
+    func convert(with stringDate: String, with andFormat: String) -> Date {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = andFormat
+        return try dateFormatter.date(from: stringDate)!
+    }
+}
+extension UIBarButtonItem {
+    var isHidden: Bool {
+        get {
+            return !isEnabled && tintColor == .clear
+        }
+        set {
+            tintColor = newValue ? .clear : nil
+            isEnabled = !newValue
+        }
     }
 }

@@ -16,6 +16,7 @@
 		6C6F0AF01FD9D22300667C65 /* TaskRest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6F0AEF1FD9D22300667C65 /* TaskRest.swift */; };
 		6C6F0AF41FD9DD1000667C65 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C6F0AF61FD9DD1000667C65 /* Realm.framework */; };
 		6C6F0AF51FD9DD1000667C65 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C6F0AF71FD9DD1000667C65 /* RealmSwift.framework */; };
+		6CD303E01FDF35BB00EDBE21 /* MRProgress.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CD303E11FDF35BB00EDBE21 /* MRProgress.framework */; };
 		6CFDBBDB1FD8763000AB668A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CFDBBDA1FD8763000AB668A /* AppDelegate.swift */; };
 		6CFDBBE01FD8763000AB668A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CFDBBDE1FD8763000AB668A /* Main.storyboard */; };
 		6CFDBBE21FD8763000AB668A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6CFDBBE11FD8763000AB668A /* Assets.xcassets */; };
@@ -46,6 +47,7 @@
 		6C6F0AF21FD9DC7C00667C65 /* TaskServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskServiceTest.swift; sourceTree = "<group>"; };
 		6C6F0AF61FD9DD1000667C65 /* Realm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Realm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C6F0AF71FD9DD1000667C65 /* RealmSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6CD303E11FDF35BB00EDBE21 /* MRProgress.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MRProgress.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CFDBBD71FD8763000AB668A /* TrabalhandoComRest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrabalhandoComRest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CFDBBDA1FD8763000AB668A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6CFDBBDF1FD8763000AB668A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6CD303E01FDF35BB00EDBE21 /* MRProgress.framework in Frameworks */,
 				6C6F0AF41FD9DD1000667C65 /* Realm.framework in Frameworks */,
 				6C6F0AF51FD9DD1000667C65 /* RealmSwift.framework in Frameworks */,
 				12B99AA6A7EE5CD2A063802B /* Pods_TrabalhandoComRest.framework in Frameworks */,
@@ -84,6 +87,7 @@
 		52478D6A965CB0B156B1E7C6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6CD303E11FDF35BB00EDBE21 /* MRProgress.framework */,
 				6C6F0AF61FD9DD1000667C65 /* Realm.framework */,
 				6C6F0AF71FD9DD1000667C65 /* RealmSwift.framework */,
 				002B350C2E42074CDB460B93 /* Pods_TrabalhandoComRest.framework */,
@@ -339,7 +343,9 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/BFKit/BFKit.framework",
 				"${BUILT_PRODUCTS_DIR}/EasyRest/EasyRest.framework",
+				"${BUILT_PRODUCTS_DIR}/GLCalendarView/GLCalendarView.framework",
 				"${BUILT_PRODUCTS_DIR}/Genome/Genome.framework",
+				"${BUILT_PRODUCTS_DIR}/MRProgress/MRProgress.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SVPullToRefresh/SVPullToRefresh.framework",
@@ -351,7 +357,9 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BFKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EasyRest.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GLCalendarView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Genome.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MRProgress.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVPullToRefresh.framework",
