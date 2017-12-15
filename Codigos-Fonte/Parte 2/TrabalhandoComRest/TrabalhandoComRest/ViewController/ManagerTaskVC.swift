@@ -12,6 +12,7 @@ class ManagerTaskVC: UIViewController {
     
     var selectedTask: TaskRest?
     
+    @IBOutlet weak var testeKeyboard: UITextField!
     @IBOutlet weak var titleTask: UITextField!
     @IBOutlet weak var descriptionTask: UITextView!
     @IBOutlet weak var isComplete: UISwitch!
@@ -31,6 +32,8 @@ class ManagerTaskVC: UIViewController {
         
     }
     @IBAction func saveTask(_ sender: Any) {
+        
+        self.view.endEditing(true)
         
         guard  self.titleTask.text != nil || !(self.titleTask.text?.isEmpty)!  else {
             MessageUtil.showMessage(view: self.view, theme: .warning, title: "Atenção", detail: "Informe os Campos corretamente", labelButton: "OK")

@@ -16,6 +16,7 @@ target 'TrabalhandoComRest' do
   pod 'RealmSwift', '~> 3.0'
   pod 'GLCalendarView', '~> 1.0.0'
   pod 'MRProgress'
+  pod 'IQKeyboardManager'
   # pod 'Alamofire'
   
 end

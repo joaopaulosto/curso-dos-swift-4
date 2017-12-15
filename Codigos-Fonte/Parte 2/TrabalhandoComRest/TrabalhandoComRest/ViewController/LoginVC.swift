@@ -21,8 +21,6 @@ class LoginVC: UIViewController {
     }
     
     func verifyLastLogin(){
-       
-        
         let db = DataBase()
         if let token = db.findById(id: "1"){
             let expiratedDate = Date(timeIntervalSinceNow: TimeInterval(token.expiresIn))
@@ -33,11 +31,7 @@ class LoginVC: UIViewController {
         }else{
             self.userName.text = UserDefaults.standard.string(forKey: "username")
         }
-
     }
-    
-  
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -75,14 +69,7 @@ class LoginVC: UIViewController {
         db.save(obj: enty)
         
         SecurityUtil.shared().settingKeyLogin(key: token.accessToken!)
-    
-    /*
         
-        defaults.setValue(token.accessToken, forKey: "acessoToken")
-        defaults.setValue(token.expiresIn!, forKey: "expiresIn")
-        defaults.setValue(token.refreshToken, forKey: "refreshToken")
-        defaults.setValue(token.scope, forKey: "scope")
- */
         let defaults = UserDefaults.standard
         defaults.setValue(self.userName?.text!, forKey: "username")
         
